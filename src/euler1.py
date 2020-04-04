@@ -46,11 +46,14 @@ def wrapper(func, *args, **kwargs):
         return func(*args, **kwargs)
     return wrapped
 
-print("Timing the simple if/else function: ")
-time_taken = timeit.timeit(get_multiples_1, number=100_000)
-print(f"Function 1: {time_taken}")
+def time_code():
+    print("Timing the simple if/else function: ")
+    time_taken = timeit.timeit(get_multiples_1, number=100_000)
+    print(f"Function 1: {time_taken}")
 
-wrapped = wrapper(get_multiples_2, factors, 1000)
-print("Timing the improved function: ")
-time_taken = timeit.timeit(wrapped, number=100_000)
-print(f"Function 2: {time_taken}")
+    wrapped = wrapper(get_multiples_2, factors, 1000)
+    print("Timing the improved function: ")
+    time_taken = timeit.timeit(wrapped, number=100_000)
+    print(f"Function 2: {time_taken}")
+
+# time_code()

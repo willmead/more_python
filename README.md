@@ -7,3 +7,4 @@ Ideas:
 - GUIs
 - Documentation
 - Writing Pythonic Code
+- Project Euler

@@ -17,6 +17,10 @@ def get_multiples_1():
 
     return multiples
 
+print(sum(get_multiples_1()))
+
+
+
 
 def get_multiples_2(factors, max):
     multiples = []

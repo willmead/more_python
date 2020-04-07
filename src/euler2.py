@@ -43,5 +43,3 @@ def time_code():
 max = 4_000_000
 even_fibonacci = [term for term in fibonacci_1() if term % 2 == 0]
 print(f"Sum of all even fibonacci terms smallers than {max}: {sum(even_fibonacci)}")
-
-# time_code()

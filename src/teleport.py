@@ -33,11 +33,13 @@ population = basic_info_json['population']
 print(f"Name: {name}")
 print(f"Population: {population}")
 
-# Printing scores for an area
-for category in scores_json['categories']:
+categories = scores_json['categories']
+
+for category in categories:
     name = category['name']
     score = category['score_out_of_10']
     print(f"{name}: {score}")
-
-total_score = scores_json['teleport_city_score']
-print(f"Total Score: {total_score}")
+    
+##
+##total_score = scores_json['teleport_city_score']
+##print(f"Total Score: {total_score}")

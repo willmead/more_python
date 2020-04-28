@@ -16,6 +16,8 @@ def get_json(url):
 
 api_base = "https://api.teleport.org/api/"
 
+# api_url = "https://api.teleport.org/api/cities/geonameid:{2643743}"
+
 city = "london"
 city_id = "2643743"
 cities_endpoint = f"cities/geonameid:{city_id}"

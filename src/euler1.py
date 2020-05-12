@@ -6,6 +6,7 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 """
 import timeit
 
+
 def get_multiples_1():
     multiples = []
 
@@ -17,9 +18,8 @@ def get_multiples_1():
 
     return multiples
 
+
 print(sum(get_multiples_1()))
-
-
 
 
 def get_multiples_2(factors, max):
@@ -42,6 +42,7 @@ print(f"Method 2 Answer: {total_2}")
 
 print()
 
+
 ########
 # Timing
 ########
@@ -49,6 +50,7 @@ def wrapper(func, *args, **kwargs):
     def wrapped():
         return func(*args, **kwargs)
     return wrapped
+
 
 def time_code():
     print("Timing the simple if/else function: ")
@@ -60,4 +62,5 @@ def time_code():
     time_taken = timeit.timeit(wrapped, number=100_000)
     print(f"Function 2: {time_taken}")
 
-# time_code()
+
+time_code()

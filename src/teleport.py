@@ -5,6 +5,7 @@ import ssl
 # Necessary to remove SSL Errors (possibly due to MacOS certificates)
 ssl._create_default_https_context = ssl._create_unverified_context
 
+
 def get_json(url):
     """Retrieve JSON data from given URL"""
     request = urllib.request.urlopen(url)
@@ -41,7 +42,3 @@ for category in categories:
     name = category['name']
     score = category['score_out_of_10']
     print(f"{name}: {score}")
-    
-##
-##total_score = scores_json['teleport_city_score']
-##print(f"Total Score: {total_score}")

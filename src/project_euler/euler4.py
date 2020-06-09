@@ -6,9 +6,11 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 """
 import itertools
 
+
 def is_palindrome(number):
     string = str(number)
     return string == string[::-1]
+
 
 def largest_palindrome_1():
     for i in range(100, 1000):

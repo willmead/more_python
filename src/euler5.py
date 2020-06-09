@@ -25,6 +25,8 @@ max = 20
 current_num = max
 
 while searching:
+    if current_num % 1_000_000 == 0:
+        print(current_num)
     if divisible_2(current_num, max):
         searching = False
         print(current_num)

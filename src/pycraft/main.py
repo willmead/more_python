@@ -600,6 +600,4 @@ def main():
     print("Game is Running")
 
 
-
-if __name__ == '__main__':
-    main()
+main()

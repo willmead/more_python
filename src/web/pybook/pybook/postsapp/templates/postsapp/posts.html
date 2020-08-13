@@ -1,0 +1,38 @@
+{% extends 'postsapp/base_template.html' %}
+
+{% block content %}
+
+<section class='section'>
+  <div class='container'>
+    <h1 class='title'>New Post</h1>
+      <form action="{% url 'postsapp:new_post' %}" method="post">
+        {% csrf_token %}
+        <div class="field is-grouped">
+          <div class="control is-expanded">
+            <label class="label">Message</label>
+            <input class="input" type="text" name="post_body" placeholder="What's up?">
+          </div>
+          <div class="control is-expanded">
+            <label class="label">Username</label>
+            <input class="input" type="text" name="post_user" placeholder="Who's posting?">
+          </div>
+        </div>
+        <div class="field">
+          <button class="button is-primary">Submit</button>
+        </div>
+      </form>
+  </div>
+</section>
+
+<section class="section">
+  <div class='container'>
+    {% for post in post_list %}
+    <div class='content'>
+      <h1 class='title'>{{ post.body }}</h1>
+      <p class='subtitle'>{{ post.user }} - {{ post.datetime }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% endblock %}
